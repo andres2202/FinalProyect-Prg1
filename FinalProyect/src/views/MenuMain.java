@@ -2,16 +2,13 @@ package views;
 
 import utilits.ViewUtilits;
 
-public class MenuMain {
-
-	private String title;
-	private String question;
+public class MenuMain extends Menu implements showMenu{
 		
 	public MenuMain(String title, String question) {
-		this.title = title;
-		this.question = question;
+		super(title, question);
 	}
 
+	@Override
 	public Menu[] optionsMenus() {
 		Menu[] menus = {
 				new Menu('1',"Agregar Conjunto de productos"),
@@ -22,12 +19,13 @@ public class MenuMain {
 		return menus;
 	}
 	
+	@Override
 	public void show(int width) {
 		ViewUtilits utilits = new ViewUtilits();
 		utilits.showLine('*', width,utilits.generate('*', width));
 		utilits.showLine('*', width,utilits.centerText(width,this.title));
 		for (Menu menus : optionsMenus()) {
-			utilits.showLine('*', width,menus.option + " - " + menus.text);
+			utilits.showLine('*', width,menus.getOption() + " - " + menus.getText());
 		}
 		utilits.showLine('*', width,utilits.generate('*', width));
 		utilits.showLine('*', width,utilits.centerText(width,this.question));

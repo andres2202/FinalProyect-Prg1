@@ -2,12 +2,19 @@ package views;
 
 public class Menu {
 
-	protected char option;
-	protected String text;
-	
+	private char option;
+	private String text;
+	protected String question;
+	protected String title;
+
 	public Menu(char option, String text) {
 		this.option = option;
 		this.text = text;
+	}
+	
+	public Menu(String title,String question) {
+		this.question = question;
+		this.title = title;
 	}
 	
 	public boolean isValidateOption(char option) {
@@ -16,4 +23,20 @@ public class Menu {
 		}
 		return false;
 	}
+
+	/**
+	 * @return the option
+	 */
+	public char getOption() {
+		return option;
+	}
+	
+	
+	/**
+	 * @return
+	 */
+	public String getText() {
+		return text;
+	}
+
 }
