@@ -14,7 +14,8 @@ public class Splash {
 		viewUtilits.showLine(borders[2],width,viewUtilits.centerText(width,Message.NAME_APP));
 		viewUtilits.showLine(borders[2],width,viewUtilits.centerText(width,Message.NAME_AUTHOR));
 		viewUtilits.showLine(borders[2],width,viewUtilits.centerText(width,Message.VERSION_OF_APP));
-		for (int i = 0; i < viewUtilits.wordWrap(Message.DESCRIPTION_OF_APP, width).size(); i++) {
+		int size = viewUtilits.wordWrap(Message.DESCRIPTION_OF_APP, width).size();
+		for (int i = 0; i < size; i++) {
 			viewUtilits.showLine(borders[0], width, viewUtilits.wordWrap(Message.DESCRIPTION_OF_APP, width).getData(i));
 		}
 		viewUtilits.showLine(borders[0],width,viewUtilits.generate(borders[1],width));		
