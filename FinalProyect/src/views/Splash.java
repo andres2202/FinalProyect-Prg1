@@ -4,8 +4,6 @@ import presenters.Message;
 import utilits.MyArray;
 import utilits.ViewUtilits;
 
-
-
 public class Splash {
 
 	public void showSplash(int width,char ... borders) {
