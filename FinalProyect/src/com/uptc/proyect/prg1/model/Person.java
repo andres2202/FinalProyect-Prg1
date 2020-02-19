@@ -1,29 +1,27 @@
 package com.uptc.proyect.prg1.model;
 
 /**
- * @description Esta clase nos da una persona
+ * @descrption Esta clase es de una persona y nos da las caracterizticas
+ * mas basicas de este
  * @author Sebastian Martinez
- * @date 04/12/2019
+ * @date 19/02/2020
  */
 public class Person {
-	
-	protected String name; // nombre
-	protected int age; // edad
-	protected String identification; // identificacion
-	protected Gender gender;
-		
+
+	protected String name; // Nombre
+	protected byte age; // edad
+	protected String identificator; // Identidad
 	
 	/**
-	 * @description Contructor que inicializa la persona
+	 * @descritpion Este es el constructor y nos inicializa las variables 
 	 * @param name
 	 * @param age
-	 * @param identification
+	 * @param identificator
 	 */
-	public Person(String name, int age, String identification,Gender gender) {
+	public Person(String name, byte age, String identificator) {
 		this.name = name;
 		this.age = age;
-		this.identification = identification;
-		this.gender = gender;
-	}	
+		this.identificator = identificator;
+	}
 	
 }

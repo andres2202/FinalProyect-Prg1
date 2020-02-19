@@ -1,58 +1,46 @@
 package com.uptc.proyect.prg1.model;
-/**
- * @description Este Clase es de un producto y sus atributos
- * @author Sebastian Martinez
- * @date 04/12/2019
- */
+
 public class Product {
 
-	private String name; //nombre
-	private String code;
-	private String typeOfProduct; //Tipo de producto
-	private DateProduct dateProduct; // Las fechas de expedicion y vencimiento
+	private String name; // Name
+	private TypeOfProduct type; // tipo
+	private String code; // codigo
 	
 	/**
-	 * @description Este metodo es el constructor e inicializa los productos
+	 * @descrption Este es el contrucotr e inicializa las variables
 	 * @param name
-	 * @param typeOfProduct
-	 * @param dateProduct
+	 * @param type
+	 * @param code
 	 */
-	public Product(String name,String code, String typeOfProduct, DateProduct dateProduct) {
+	public Product(String name, TypeOfProduct type, String code) {
 		this.name = name;
+		this.type = type;
 		this.code = code;
-		this.typeOfProduct = typeOfProduct;
-		this.dateProduct = dateProduct;
 	}
-	
+
 	/**
-	 * @description Obtiene el nombre
-	 * @return el nombre
+	 * @description Este es el getter de name
+	 * @return the name
 	 */
 	public String getName() {
 		return name;
 	}
-	
+
 	/**
-	 * @escription Obtiene el codigo
-	 * @return el codigo
+	 * @description Este es el getter de type
+	 * @return the type
+	 */
+	public TypeOfProduct getType() {
+		return type;
+	}
+
+	/**
+	 * @description Este es el getter de code
+	 * @return the code
 	 */
 	public String getCode() {
 		return code;
 	}
 	
-	/**
-	 * @description Obtiene el tipo de producto
-	 * @return El tipo de producto
-	 */
-	public String getTypeOfProduct() {
-		return typeOfProduct;
-	}
 	
-	/**
-	 * @description Obtiene las fechas
-	 * @return las fechas
-	 */
-	public DateProduct getDateProduct() {
-		return dateProduct;
-	}
 }

@@ -1,32 +1,34 @@
 package com.uptc.proyect.prg1.model;
 
 /**
- * @description Este Clase es del cliente
+ * @descrption Este clase es la de un cliente 
  * @author Sebastian Martinez
- * @date 04/12/2019
+ * @date 19/02/2020
  */
 public class Client extends Person{
 
-	private String code; // codigo
+	private String password; // Contraseña
 
-	/**
-	 * @description Contructor del cliente
-	 * @param name
-	 * @param age
-	 * @param identification
-	 * @param code
-	 */
-	public Client(String name, int age, String identification, Gender gender, String code) {
-		super(name, age, identification, gender);
-		this.code = code;
+	public Client(String name, byte age, String identificator, String password) {
+		super(name, age, identificator);
+		this.password = password;
 	}
 
-
 	/**
-	 * @description Obtiene el codigo
-	 * @return the code
+	 * description Este metodo nos devuelve la contraseña
+	 * @return the password
 	 */
-	public String getCode() {
-		return code;
+	public String getPassword() {
+		return password;
 	}
+	
+	/**
+	 * @descrpiton Este metodo nos dice si esta bien la contraseña
+	 * @param password
+	 * @return true si cumple false si no
+	 */
+	public boolean isValidatePassword(String password) {
+		return this.password.equals(password);
+	}
+	
 }
