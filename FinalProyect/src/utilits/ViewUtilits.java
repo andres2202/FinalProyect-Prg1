@@ -100,11 +100,18 @@ public class ViewUtilits {
 				countCharacters = 0;
 				line = "";
 			}
-			
 		}
-//		words = result.getDatas();
 		return result;
 	}
 	
+	
+	/**@descrption Este metodo nos dice si es valida una linea con
+	 * las instrucciones dada
+	 * @param line el texto que se recibe
+	 * @return True si cumple false si no
+	 */
+	public boolean validateLine(String line) {
+		return (line.length() == 1) ? line.matches("^[s|N|S|n]{1}$"):false;
+	}
 	
 }

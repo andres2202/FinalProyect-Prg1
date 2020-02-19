@@ -6,6 +6,9 @@ public class Menu {
 	private String text;
 	protected String question;
 	protected String title;
+	
+	public Menu() {
+	}
 
 	public Menu(char option, String text) {
 		this.option = option;
@@ -15,13 +18,6 @@ public class Menu {
 	public Menu(String title,String question) {
 		this.question = question;
 		this.title = title;
-	}
-	
-	public boolean isValidateOption(char option) {
-		if (option == this.option) {
-			return true;
-		}
-		return false;
 	}
 
 	/**

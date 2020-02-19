@@ -2,49 +2,35 @@ package presenters;
 
 
 import views.Console;
+import views.Imput;
+import views.Menu;
+import views.MenuMain;
+import views.Splash;
 
 public class Presenter {
 
 	private Console console;
 	
 	public Presenter() {
-		console = new Console();
-		menuOfProgram();
+		console = new Console(new Imput());
+		run();
 	}
 	
-	public void menuOfProgram() {
-		console.showMenuPrincipal();
-		try {
-			int options = console.getOptionMenu();
-			switch(options) {
-			case 1: // compra sin registrarse
-				
-			break;
-			case 2: // Registrarse
-				
-			break;
-			case 3: // Cliente registrado
-			
-			break;
-			case 4: // Administrador
-				
-			break;
-			case 5: // salir del programa
-				
-			break;
-			default:
-				console.printErrorOfInt();
-				menuOfProgram();
+	public void run() {
+		new Splash().showSplash(Message.WIDTH,Message.ASTERIST,Message.ASTERIST,Message.ASTERIST);
+		MenuMain menuPrincipal = new MenuMain(Message.MENU_MAIN_STRING,Message.QUESTION);
+		char option;
+		do {
+			menuPrincipal.show(Message.WIDTH);
+			option = console.getImput().readChar();
+			if (!menuPrincipal.isValidateOption(option)) {
+				this.console.showMessageError(Message.READ_ERROR);
 			}
-		} catch (Exception e) {
-			console.printErrorOfNotInt();
-			menuOfProgram();
-		}finally {
-			console.closeScanner();
-		}
+		} while (!menuPrincipal.isValidateOption(option));
 	}
 	
-	public void client() {
+	
+	public void addClient() {
 		
 	}
 	
