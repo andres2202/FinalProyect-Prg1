@@ -8,5 +8,4 @@ public class Message {
 	public static final String VERSION_OF_APP = "Version 0.1";
 	public static final String DESCRIPTION_OF_APP = "Esta aplicacion se creo para llevar un control de las ventas y compras que se realizan en el dia del supermercado de lolita para que lleve un informe mas detallado de su negocio";
 	
-	// Mensajes para el menu principal
 }

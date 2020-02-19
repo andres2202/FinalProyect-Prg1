@@ -2,22 +2,21 @@ package views;
 
 import utilits.ViewUtilits;
 
-public class MenuMain extends Menu implements showMenu{
-		
-	public MenuMain(String title, String question) {
+public class MenuStadistic extends Menu implements showMenu{
+
+	public MenuStadistic(String title, String question) {
 		super(title, question);
 	}
 
 	@Override
 	public Menu[] optionsMenus() {
 		Menu[] menus = {
-				new Menu(MessageMenu.OPTION_ONE,MessageMenu.ADD_CLIENT),
-				new Menu(MessageMenu.OPTION_TWO,MessageMenu.BUY_PRODUCTS),
-				new Menu(MessageMenu.OPTION_THREE,MessageMenu.ADMINISTRATOR),
-				new Menu(MessageMenu.OPTION_FOUR,MessageMenu.STADISTICS),
-				new Menu(MessageMenu.OPTION_FIVE,MessageMenu.EXIT),
+				new Menu(MessageMenu.OPTION_ONE,MessageMenu.LIST_BEST_CLIENT),
+				new Menu(MessageMenu.OPTION_TWO,MessageMenu.PRODUCT_BEST_SOLD),
+				new Menu(MessageMenu.OPTION_THREE,MessageMenu.BUYS_TOTALS),
+				new Menu(MessageMenu.OPTION_FOUR,MessageMenu.EXIT),
 		};
-		return menus;
+		return null;
 	}
 	
 	@Override
@@ -33,4 +32,5 @@ public class MenuMain extends Menu implements showMenu{
 		utilits.showLine('*', width,utilits.generate('*', width));
 		
 	}
+
 }

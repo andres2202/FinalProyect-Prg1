@@ -1,22 +1,36 @@
 package views;
 
+import utilits.ViewUtilits;
+
 public class MenuAdministrator extends Menu implements showMenu{
 	
 	public MenuAdministrator(String title, String question) {
 		super(title, question);
-		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	public void show(int width) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public Menu[] optionsMenus() {
-		// TODO Auto-generated method stub
-		return null;
+		Menu[] menus = {
+				new Menu(MessageMenu.OPTION_ONE,MessageMenu.ADD_PRODUCTS),
+				new Menu(MessageMenu.OPTION_TWO,MessageMenu.ADD_PRODUCT),
+				new Menu(MessageMenu.OPTION_THREE,MessageMenu.LIST_CLIENT),
+				new Menu(MessageMenu.OPTION_FOUR,MessageMenu.ADD_UNITS_PRODUCT),
+				new Menu(MessageMenu.OPTION_FIVE,MessageMenu.EXIT),
+		};
+		return menus;
+	}
+	
+	@Override
+	public void show(int width) {
+		ViewUtilits utilits = new ViewUtilits();
+		utilits.showLine('*', width,utilits.generate('*', width));
+		utilits.showLine('*', width,utilits.centerText(width,this.title));
+		for (Menu menus : optionsMenus()) {
+			utilits.showLine('*', width,menus.getOption() + " - " + menus.getText());
+		}
+		utilits.showLine('*', width,utilits.generate('*', width));
+		utilits.showLine('*', width,utilits.centerText(width,this.question));
+		utilits.showLine('*', width,utilits.generate('*', width));
 	}
 
 }
