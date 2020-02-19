@@ -3,8 +3,8 @@ package presenters;
 
 import views.Console;
 import views.Imput;
-import views.Menu;
 import views.MenuMain;
+import views.MessageMenu;
 import views.Splash;
 
 public class Presenter {
@@ -21,14 +21,26 @@ public class Presenter {
 		MenuMain menuPrincipal = new MenuMain(Message.MENU_MAIN_STRING,Message.QUESTION);
 		char option;
 		do {
-			menuPrincipal.show(Message.WIDTH);
-			option = console.getImput().readChar();
-			if (!menuPrincipal.isValidateOption(option)) {
-				this.console.showMessageError(Message.READ_ERROR);
+			do {
+				menuPrincipal.show(Message.WIDTH);
+				option = console.getImput().readChar();
+				if (!menuPrincipal.isValidateOption(option)) {
+					this.console.showMessageError(Message.READ_ERROR);
+				}
+			} while (!menuPrincipal.isValidateOption(option));
+			switch (option) {
+			case MessageMenu.OPTION_ONE:
+				addClient();
+				return;
+			case MessageMenu.OPTION_FIVE:
+				this.console.showMessage(Message.EXIT);
+				return;
+			default:
+				this.console.showMessageError(Message.MESSAGE_CONTRUCTION_STRING);
+				break;
 			}
-		} while (!menuPrincipal.isValidateOption(option));
+		}while(true);
 	}
-	
 	
 	public void addClient() {
 		

@@ -14,6 +14,8 @@ public class Message {
 	public static final char ASTERIST = '*';
 	public static final String QUESTION = "¿Elige una Opcion?";
 	public static final String READ_ERROR = "Lo que digito esta incorrecto";
+	public static final String EXIT = "Gracias por comprar.";
+	public static final String MESSAGE_CONTRUCTION_STRING = "Esta en construccion";
 	
 	
 	//Mensajes para el menu principal
