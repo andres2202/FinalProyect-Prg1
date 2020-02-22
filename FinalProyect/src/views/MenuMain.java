@@ -1,7 +1,7 @@
 package views;
 
 import presenters.Message;
-import utilits.ViewUtilits;
+import utilities.ViewUtilities;
 
 public class MenuMain extends Menu implements showMenu{
 		
@@ -23,7 +23,7 @@ public class MenuMain extends Menu implements showMenu{
 	
 	@Override
 	public void show(int width) {
-		ViewUtilits utilits = new ViewUtilits();
+		ViewUtilities utilits = new ViewUtilities();
 		utilits.showLine(Message.ASTERIST, width,utilits.generate(Message.ASTERIST, width));
 		utilits.showLine(Message.ASTERIST, width,utilits.centerText(width,this.title));
 		for (Menu menus : optionsMenus()) {

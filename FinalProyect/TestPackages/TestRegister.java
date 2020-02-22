@@ -10,6 +10,6 @@ public class TestRegister {
 				new Client("S",15,"12",Gender.FEMENINE,"S"),
 		};
 		
-		GroupClient clients = new GroupClient(client);
+		//GroupClient clients = new GroupClient(client);
 	}
 }

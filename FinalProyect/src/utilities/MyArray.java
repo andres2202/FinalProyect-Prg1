@@ -1,4 +1,4 @@
-package utilits;
+package utilities;
 
 public class MyArray <T>{
 

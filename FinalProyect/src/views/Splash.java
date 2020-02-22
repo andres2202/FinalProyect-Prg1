@@ -1,13 +1,13 @@
 package views;
 
 import presenters.Message;
-import utilits.MyArray;
-import utilits.ViewUtilits;
+import utilities.MyArray;
+import utilities.ViewUtilities;
 
 public class Splash {
 
 	public void showSplash(int width,char ... borders) {
-		ViewUtilits viewUtilits = new ViewUtilits();
+		ViewUtilities viewUtilits = new ViewUtilities();
 		viewUtilits.showLine(borders[0],width,viewUtilits.generate(borders[1],width));
 		viewUtilits.showLine(borders[2],width,viewUtilits.centerText(width,Message.NAME_APP));
 		viewUtilits.showLine(borders[2],width,viewUtilits.centerText(width,Message.NAME_AUTHOR));

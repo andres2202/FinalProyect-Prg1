@@ -1,4 +1,4 @@
-package utilits;
+package utilities;
 
 
 /**@descrition Este clase nos ayuda para mostrar los menus,
@@ -6,7 +6,7 @@ package utilits;
  * @author Sebastian Martinez
  *
  */
-public class ViewUtilits {
+public class ViewUtilities {
 
 	
 	/**

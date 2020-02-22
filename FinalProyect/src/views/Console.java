@@ -1,6 +1,6 @@
 package views;
 
-import utilits.ViewUtilits;
+import utilities.ViewUtilities;
 
 /**
  * @descrption Este Clase es la consola y es la cual se encarga de recibir
@@ -58,7 +58,7 @@ public class Console {
 	public boolean readBoolean(String message) {
 		System.out.println(message + "[s/n]");
 		String line = imput.readString();
-		if (new ViewUtilits().validateLine(line)) {
+		if (new ViewUtilities().validateLine(line)) {
 			return line.equals("s") || line.equals("S") ? true : false;
 		}else {
 			readBoolean(message);

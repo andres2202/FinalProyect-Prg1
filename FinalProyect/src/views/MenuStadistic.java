@@ -1,6 +1,6 @@
 package views;
 
-import utilits.ViewUtilits;
+import utilities.ViewUtilities;
 
 public class MenuStadistic extends Menu implements showMenu{
 
@@ -21,7 +21,7 @@ public class MenuStadistic extends Menu implements showMenu{
 	
 	@Override
 	public void show(int width) {
-		ViewUtilits utilits = new ViewUtilits();
+		ViewUtilities utilits = new ViewUtilities();
 		utilits.showLine('*', width,utilits.generate('*', width));
 		utilits.showLine('*', width,utilits.centerText(width,this.title));
 		for (Menu menus : optionsMenus()) {
